@@ -2,6 +2,8 @@
 
 PRL RIM Atlas is a deployable Streamlit application for visual quality control and morphometry of manually segmented paramagnetic rim lesions (PRLs).
 
+This application refers to the following publication : "XXXXXXXXXXXXX"
+
 It supports:
 
 - one or many ImageJ `.roi` files, directly or inside `.zip` archives;
@@ -93,6 +95,4 @@ docker run --rm -p 8501:8501 prl-rim-atlas
 
 Use an institution-approved private environment for clinical or identifiable data.
 
-## Privacy and intended use
 
-This is research software, not a medical device. Uploaded bytes are processed in the active Streamlit session and are not written to an application upload directory. Exports intentionally omit original DICOM bytes and patient metadata. DICOM filenames can still contain identifiers, and a public deployment may run outside your jurisdiction; upload only de-identified files unless the deployment has been approved for protected health information.
