@@ -4,6 +4,12 @@ from pathlib import Path
 
 from streamlit.testing.v1 import AppTest
 
+from ui.styles import APP_CSS
+
+
+def test_streamlit_toolbar_remains_available_for_sidebar_reopen() -> None:
+    assert '[data-testid="stToolbar"] { display:none; }' not in APP_CSS
+
 
 def test_streamlit_initial_load_has_no_exception() -> None:
     app_path = Path(__file__).resolve().parents[1] / "app.py"

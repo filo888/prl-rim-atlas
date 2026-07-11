@@ -23,7 +23,7 @@ html, body, [class*="css"] { font-family: "Aptos", "Segoe UI", Inter, sans-serif
     #f4f7f3;
 }
 [data-testid="stHeader"] { background: transparent; }
-[data-testid="stToolbar"] { display:none; }
+[data-testid="stToolbar"] { right: 1rem; }
 .block-container { max-width: 1480px; padding-top: 1.3rem; padding-bottom: 3rem; }
 
 section[data-testid="stSidebar"] {
