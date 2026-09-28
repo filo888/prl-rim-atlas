@@ -197,6 +197,8 @@ div[data-testid="stImage"] img { border-radius:20px; border:1px solid var(--line
 .stDownloadButton > button { background:#fff; }
 [data-testid="stDataFrame"],div[data-testid="stImage"] img { border-radius:10px; box-shadow:none; }
 section[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] { border-color:#76b8c2; border-radius:10px; }
+section[data-testid="stSidebar"] [data-testid="stFileChip"] { background:#153646; border:1px solid #416471; }
+section[data-testid="stSidebar"] [data-testid="stFileChip"] button { background:transparent !important; color:#dceef2 !important; border:0; }
 .footer-note { font-size:.8rem; line-height:1.6; }
 button:focus-visible,a:focus-visible { outline:3px solid #218da1; outline-offset:3px; }
 @media(max-width:900px) { .block-container { padding-left:1.2rem; padding-right:1.2rem; } .workspace-header { flex-direction:column; align-items:flex-start; gap:1rem; } }

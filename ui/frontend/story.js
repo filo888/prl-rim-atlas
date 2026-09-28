@@ -18,7 +18,7 @@ export default function ({ parentElement }) {
   const scroller = host.closest('[data-testid="stMain"]') || document.scrollingElement;
   const scrollTarget = scroller === document.scrollingElement ? window : scroller;
   const media = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const shortViewport = window.matchMedia('(max-height: 740px)');
+  const shortViewport = window.matchMedia('(max-height: 650px), (max-width: 760px) and (max-height: 740px)');
   const controller = new AbortController();
   const events = { signal: controller.signal };
   let userPaused = media.matches;

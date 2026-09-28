@@ -34,7 +34,7 @@ st.set_page_config(
     page_title="PRL RIM Atlas",
     page_icon="◉",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="auto",
     menu_items={"About": "PRL RIM Atlas — research-use morphometry workspace"},
 )
 st.markdown(APP_CSS, unsafe_allow_html=True)
