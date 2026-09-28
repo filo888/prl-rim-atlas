@@ -75,6 +75,17 @@ Medial-axis tie breaking is seeded to make repeated runs deterministic. `Auto by
 
 ## Deploy as a link
 
+### Front-end development
+
+The opening page includes a locally bundled, scroll-driven Three.js narrative.
+It is a conceptual illustration; the existing analysis still operates on the
+uploaded 2D masks. Motion can be paused and respects reduced-motion preferences.
+
+To edit the animation, run `npm ci`, edit `ui/frontend/`, then run
+`npm run build`. Commit the generated `ui/static/story.js` with the source.
+No Node.js runtime or external CDN is required in the deployed app.
+See [design references and implementation notes](docs/frontend-design.md).
+
 ### Streamlit Community Cloud
 
 1. Push this directory to a GitHub repository.

@@ -27,6 +27,7 @@ from prl.roi_io import (
 )
 from prl.visualization import overlay_png_bytes, render_overlay
 from ui.styles import APP_CSS
+from ui.landing import render_landing, render_workspace_header
 
 
 st.set_page_config(
@@ -690,17 +691,10 @@ dicom_assets = [asset for asset in assets if asset.kind == "dicom"]
 results: list[CaseResult] = st.session_state.get("analysis_results", [])
 errors: list[dict[str, str]] = st.session_state.get("analysis_errors", [])
 
-st.markdown(
-    """
-    <div class="hero">
-      <div class="hero-kicker">Paramagnetic rim lesion morphometry</div>
-      <h1>See the rim.<br>Measure the lesion.</h1>
-      <p>A focused workspace for ImageJ masks and DICOM slices—faithful to the paper method, explicit about calibration, and designed for visual quality control.</p>
-      <div class="hero-meta"><span class="hero-chip">Rim · mask 1</span><span class="hero-chip">Lesion core · mask 2</span><span class="hero-chip">Pixel or physical units</span><span class="hero-chip">Batch-ready</span></div>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
+if not roi_assets and not upload_failure:
+    render_landing()
+else:
+    render_workspace_header()
 render_stepper(bool(roi_assets), bool(results))
 
 if upload_failure:

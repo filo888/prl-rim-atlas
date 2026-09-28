@@ -1,0 +1,13 @@
+{
+  "name": "prl-rim-atlas-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild ui/frontend/story.js --bundle --format=esm --minify --legal-comments=linked --outfile=ui/static/story.js"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "three": "0.180.0"
+  }
+}
